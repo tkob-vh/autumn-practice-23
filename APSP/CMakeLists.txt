@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-include("etc/utils.cmake")
+include("cmake/utils.cmake")
 
 project(APSP LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 14)
@@ -11,9 +11,10 @@ add_library(graph STATIC)
 aux_source_directory(src SOURCES)
 target_sources(graph PRIVATE ${SOURCES})
 
-getSubDir(SubDirs ${PROJECT_SOURCE_DIR}/src)
+set(SrcDir ${PROJECT_SOURCE_DIR}/src)
+getSubDir(SubDirs ${SrcDir})
 foreach(SubDir ${SubDirs})
-    add_subdirectory(src/${SubDir})
+    add_subdirectory(${SrcDir}/${SubDir})
 endforeach()
 
 add_subdirectory(utils)
