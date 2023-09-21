@@ -4,6 +4,7 @@ include("cmake/utils.cmake")
 project(APSP LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+enable_testing()
 
 include_directories(include)
 
@@ -19,5 +20,3 @@ endforeach()
 
 add_subdirectory(utils)
 add_subdirectory(test)
-
-enable_testing()
