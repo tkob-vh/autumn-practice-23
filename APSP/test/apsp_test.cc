@@ -21,5 +21,8 @@ int main(int argc, char *argv[]) {
     }
 
     if (res == check_data) return 0;
-    else return -1;
+    else {
+        cout << "Results not match!" << endl;
+        return -1;
+    }
 }

@@ -1,3 +1,5 @@
+list(APPEND CMAKE_TEST_ARGUMENTS "--output-on-failure")
+
 getFiles(Inputs "/tmp/dataset/APSP" ".*raw.*")
 getCheckFiles(CheckFiles Inputs)
 
