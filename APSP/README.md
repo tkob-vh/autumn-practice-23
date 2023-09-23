@@ -38,6 +38,9 @@ for (int k = 0; k < n; k++)
     - 1024: 18 s
     - 4096: 1160 s
 
+### NOTICE
+- 由于考察的是这种特定的计算模式，不建议进行算法优化
+
 ### Reference
 
 [最短路 - OI Wiki](https://oi-wiki.org/graph/shortest-path/#floyd-算法)
