@@ -23,7 +23,7 @@ for (int k = 0; k < n; k++)
 - 要对代码进行优化，你不需要且不可以更改现有代码目录下的任何文件
 - 你需要在 `src/` 目录下建立自己的子目录，该子目录应该与baseline目录同层级，此处假设该子目录名为 `your_name`
 - 你需要在 `src/your_name`下新建 `CMakeLists.txt` ，在其中进行你的目录及编译选项等配置，并将最终的目标文件设置为dynamic library类型，且将目标命名为 `apsp_${your_name}`
-- 完成以上配置后，可直接在 `APSP/` 目录下执行`cmake -B build && cmake —build build`，即可生成用于测试的可执行文件，文件位于 `build/test/` ，名称为 `apsp_test_${your_name}`
+- 完成以上配置后，可直接在 `APSP/` 目录下执行`cmake -B build && cmake --build build`，即可生成用于测试的可执行文件，文件位于 `build/test/` ，名称为 `apsp_test_${your_name}`
 - 你可以直接执行 `ctest --test-dir build`，即可对你的实现进行测试
 - tips
     - ctest返回的时间并非你的apsp计算消耗的时间，而是整个测试程序执行的时间。测试程序内对apsp耗时进行了单独测试，但默认不会打印。若需打印准确的执行时间和其他程序输出，你需要在ctest后添加-V参数。
